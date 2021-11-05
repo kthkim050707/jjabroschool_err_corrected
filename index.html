@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Frame-Options" content="allow">
+    <title>JJab-Ro_School</title>
+	<link rel="stylesheet" href="./index.css"
+</head>
+<body>
+<header>
+        <input type="checkbox" id="side_btn" class="side_input blind">
+        <a href="starting.html" class="title" onclick="mainpage()">JJab-Ro_School</a>
+        <label for="side_btn" class="side_toggle_btn"></label>
+
+
+        <div class="side_list">
+           <!--  <a href="https://sunduck.hs.kr/" class="side_link">우리 학교</a> -->
+            <a href="javascript:void(0);"  onclick="school()" class="side_link">우리 학교</a>
+            <a onclick='time_sche()' class="side_link">시간표</a>
+            <a  class="side_link">수행평가</a>
+            <a href="#" class="side_link">급식</a>
+            <a href="#" class="side_link">대학교 입시</a>
+            <a href="https://hcs.eduro.go.kr/#/relogin" target="blank" class="side_link">자가진단</a>
+            <a onclick="zocbo()" class="side_link">문제집 정보</a>
+        </div>
+	</header>
+
+	<div class='right-box' id='time'>
+		<table style="width:100%; height:100%">
+			<caption>2021학년도 1학년 시간표</caption>
+
+			<tr>
+			  <th> </th>
+			  <th>월</th>
+			  <th>화</th>
+			  <th>수</th>
+			  <th>목</th>
+			  <th>금</th>
+			</tr>
+			  <tr>
+			  <th>1교시</th>
+			  <td>음악</td>
+			  <td>한국사 </td>
+			  <td>영어A</td>
+			  <td>실험</td>
+			  <td>체육</td>
+			 </tr>
+			  <tr>
+			  <th>2교시</th>
+			  <td>영어A </td>
+			  <td> 통합사회</td>
+			  <td> 수학A</td>
+			  <td> 영어B</td>
+			  <td>영어 B</td>
+			</tr>
+			  <tr>
+			  <th>3교시</th>
+			  <td>체육 </td>
+			  <td>국어B </td>
+			  <td>한국사</td>
+			  <td >수학B</td>
+			  <td> 한문I</td>
+			</tr>
+			 <tr>
+			  <th>4교시</th>
+			  <td>통합과학 </td>
+			  <td> 한문 I</td>
+			  <td>통합사회 </td>
+			  <td>진로 </td>
+			  <td>통합과학</td>
+			</tr>
+			 <tr>
+			  <th>5교시</th>
+			  <td  >국어A</td>
+			  <td  >음악</td>
+			  <td >국어A</td>
+			  <td  >창독I</td>
+			  <td>한국사 </td>
+			</tr>
+			 <tr>
+			  <th>6교시</th>
+			  <td>통합사회</td>
+			  <td>수학A</td>
+			  <td>창체</td>
+			  <td >음악</td>
+			  <td>국어B </td>
+			</tr>
+			 <tr>
+			  <th>7교시</th>
+			  <td >수학A</td>
+			  <td>통합과학</td>
+			  <td >창체</td>
+			  <td>통합과학</td>
+			  <td> 통합사회</td>
+			</tr>
+		  </table>
+		</table>
+	</div>
+
+	<div class='iframe-box' id='id_school'>
+		<iframe width="100%" height="100%" src="https://sunduck.sen.hs.kr/index.do" scrolling="yes" ></iframe>
+	</div>
+
+	<div class='iframe-box' id='id_zocbo'>
+		<iframe width="100%" height="100%" src="https://www.zocbo.com/" frameborder="1" scrolling="yes" ></iframe>
+	</div>
+</body>
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="./index.js"></script>
