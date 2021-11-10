@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-Frame-Options" content="allow">
+    <title>학교생활 도우미</title>
+	<link rel="stylesheet" href="./index.css"
+</head>
+<body>
+<header>
+        <input type="checkbox" id="side_btn" class="side_input blind">
+        <a href="index.html" class="title1" style="color: white" onclick="mainpage()">학교생활 도우미</a>
+        <label for="side_btn" class="side_toggle_btn"></label>
+
+
+        <div class="side_list">
+			<a onclick='time_sche()' class="side_link">시간표</a>
+			<a href="javascript:void(0);"  onclick="riro()" class="side_link">리로스쿨</a>
+            <a href="https://hcs.eduro.go.kr/#/relogin" target="blank" class="side_link">자가진단</a>
+			<a href="javascript:void(0);" onclick="school()" class="side_link">우리 학교</a>
+            <a href="javascript:void(0);" onclick="gs()" class="side_link">급식</a>
+            <a href="javascript:void(0);" onclick="edu()" class="side_link">교육 뉴스</a>
+            <a onclick="zocbo()" class="side_link">기출문제</a>
+        </div>
+	</header>
+	
+	<div class='right-box' id='time' style="text-align:center">
+		<table style="width: 95%; height: 90%;">
+			<caption style="cursor: default;">2021학년도 1학년 시간표</caption>
+
+			<tr>
+			  <th class="time_title"><span onclick="go_class()" style="cursor: pointer;" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">조/종례</span></th>
+			  <th class="time_title">월</th>
+			  <th class="time_title">화</th>
+			  <th class="time_title">수</th>
+			  <th class="time_title">목</th>
+			  <th class="time_title">금</th>
+			</tr>
+			<tr>
+			  <th class="time_title">1교시</th>
+			  <td ><span onclick="go_music()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">음악</span></td>
+			  <td><span onclick="go_history()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">한국사</span> </td>
+			  <td><span onclick="go_englishA()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">영어 A</span></td>
+			  <td><span onclick="go_experiment()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">실험</span></td>
+			  <td><span onclick="go_PE()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">체육</span></td>
+			 </tr>
+			  <tr>
+			  <th class="time_title">2교시</th>
+			  <td ><span onclick="go_englishA()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">영어 A</span> </td>
+			  <td> <span onclick="go_society()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합사회</span></td>
+			  <td>
+				<span class="time_text_math">수학 A</span><br>
+				<span onclick="go_mathA10()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">10반</span>
+				<span class="time_text_math">/</span>
+				<span onclick="go_mathA()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" >11반</span>
+			   </td>
+			  <td> <span onclick="go_englishB()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">영어 B</span></td>
+			  <td><span onclick="go_englishB()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">영어 B</span></td>
+			</tr>
+			  <tr>
+			  <th class="time_title">3교시</th>
+			  <td><span onclick="go_PE()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">체육</span> </td>
+			  <td><span onclick="go_korean()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">국어 B</span> </td>
+			  <td><span onclick="go_history()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">한국사</span></td>
+			  <td ><span onclick="go_mathB()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">수학 B</span></td>
+			  <td><span onclick="go_cchang()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">한문 I</span> </td>
+			</tr>
+			 <tr>
+			  <th class="time_title">4교시</th>
+			  <td><span onclick="go_science()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합과학</span> </td>
+			  <td><span onclick="go_cchang()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">한문 I</span></td>
+			  <td><span onclick="go_society()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합사회</span> </td>
+			  <td><span onclick="go_dream()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">진로와직업</span> </td>
+			  <td><span onclick="go_science()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합과학</span></td>
+			</tr>
+			 <tr>
+			  <th class="time_title">5교시</th>
+			  <td><span onclick="go_korean()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">국어 A</span></td>
+			  <td><span onclick="go_music()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">음악</span></td>
+			  <td><span onclick="go_korean()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">국어 A</span></td>
+			  <td><span onclick="go_class()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">창독</span></td>
+			  <td><span onclick="go_history()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">한국사</span> </td>
+			</tr>
+			 <tr>
+			  <th class="time_title">6교시</th>
+			  <td><span onclick="go_society()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합사회</span></td>
+			  <td>
+				<span class="time_text_math">수학 A</span><br>
+				<span onclick="go_mathA10()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">10반</span>
+				<span class="time_text_math">/</span>
+				<span onclick="go_mathA()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" >11반</span>
+			   </td>
+			  <td><span onclick="go_class()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">창체</span></td>
+			  <td><span onclick="go_music()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">음악</span></td>
+			  <td><span onclick="go_korean()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">국어 B</span> </td>
+			</tr>
+			 <tr>
+			  <th class="time_title">7교시</th>
+			  <td>
+				<span class="time_text_math">수학 A</span><br>
+				<span onclick="go_mathA10()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">10반</span>
+				<span class="time_text_math">/</span>
+				<span onclick="go_mathA()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'" >11반</span>
+			   </td>
+			  <td><span onclick="go_science()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합과학</span></td>
+			  <td ><span onclick="go_class()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">창체</span></td>
+			  <td><span onclick="go_science()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합과학</span></td>
+			  <td> <span onclick="go_society()" class="time_text" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">통합사회</span></td>
+			</tr>
+		  </table>
+		</table>
+	</div>
+
+	<div class='iframe-box' id='id_school'>
+		<iframe width="100%" height="100%" src="https://sunduck.sen.hs.kr/index.do" scrolling="yes" ></iframe>
+	</div>
+
+	<div class='iframe-box' id='id_edu'>
+		<iframe width="100%" height="100%" src="https://www.eduinnews.co.kr/news/articleList.html?sc_section_code=S1N15&view_type=sm" scrolling="yes"></iframe>
+	</div>
+	<div class='iframe-box' id='id_riro'>
+		<iframe width="100%" height="100%" src="https://sunduck.riroschool.kr/" scrolling="yes" ></iframe>
+	</div> 
+	<div class="iframe-box" id="id_gs">
+		<iframe width="100%" height="100%" src="https://sunduck.sen.hs.kr/77917/subMenu.do" scrolling="yes"></iframe>
+	</div>
+	<div class='iframe-box' id='id_zocbo'>
+		<iframe width="100%" height="100%" src=https://kyobobook.co.kr/categoryRenewal/categoryMain.laf?perPage=20&mallGb=KOR&linkClass=250303&menuCode=002" frameborder="1" scrolling="yes" ></iframe>
+	</div>
+
+</body>
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="./index.js"></script>
